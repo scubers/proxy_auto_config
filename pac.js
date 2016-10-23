@@ -2596,7 +2596,12 @@ var domains = {
     "zuo.la": 1,
     "zuola.com": 1,
     "zvereff.com": 1,
-    "zyzc9.com": 1
+    "zyzc9.com": 1,
+
+    "api.twitter.com": 1,
+    "api.facebook.com": 1,
+    "e.crashlytics.com": 1,
+    "settings.crashlytics.com": 1,
 };
 
 var direct = 'DIRECT;';
