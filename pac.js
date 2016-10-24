@@ -6,6 +6,7 @@ var rules = [
     /.*twitter.com/,
     /.*.gist.github.com/,
     /.*.us/,
+    /.*crashlytics.com/,
 
     /.*.download.kolor.com/,
     /.*.messenger.com/,
@@ -2606,8 +2607,12 @@ var rules = [
 
 var proxy = "PROXY [template]:8787;";
 var direct = "DIRECT";
+var allProxy = 0;
 
 function FindProxyForURL(url, host) {
+    if (allProxy > 0) {
+        return proxy
+    }
     for (var i in rules) {
         var reg = rules[i]
         var result = host.match(reg)

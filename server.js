@@ -42,6 +42,9 @@ const server = http.createServer((req, resp) => {
     var temp = fs.readFileSync("pac.js", "utf-8")
     temp = temp.replace("[template]", getHostIp())
 
+    if (req.url.indexOf("all") > 0) {
+        temp = temp.replace("var allProxy = 0;", "var allProxy = 1;")
+    }
 
     resp.write(temp)
     resp.end()
