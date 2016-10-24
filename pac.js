@@ -1,9 +1,11 @@
 var rules = [
     /.*.google.com/,
     /.*.co.jp/,
+    /.*.jp/,
     /.*facebook.com/,
     /.*twitter.com/,
     /.*.gist.github.com/,
+    /.*.us/,
 
     /.*.download.kolor.com/,
     /.*.messenger.com/,
@@ -21,11 +23,8 @@ var rules = [
     /.*.raw.githubusercontent.com/,
     /.*.iobit.com/,
     /.*.telegram.org/,
-    /.*.abc.xyz/,
     /.*.s3.amazonaws.com/,
-    /.*.d.chenqiwei.com/,
     /.*.blogspot.com/,
-    /.*.teamviewer.com/,
     /.*.truste.com/,
     /.*.ml314.com/,
     /.*.a.fsdn.com/,
