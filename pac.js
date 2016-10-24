@@ -5,7 +5,6 @@ var rules = [
     /.*twitter.com/,
     /.*.gist.github.com/,
 
-
     /.*.download.kolor.com/,
     /.*.messenger.com/,
     /.*.tumblr.com/,
@@ -2605,16 +2604,6 @@ var rules = [
     /.*.zvereff.com/,
     /.*.zyzc9.com/,
 ];
-var host = "a.facebook.com";
-for (var i in rules) {
-    var reg = rules[i];
-    var a = host.match(reg)
-    if (a == null) {
-        console.log("null")
-    } else {
-        console.log(a)
-    }
-}
 
 var proxy = "PROXY [template]:8787;";
 var direct = "DIRECT";
