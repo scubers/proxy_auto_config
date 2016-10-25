@@ -36,9 +36,6 @@ const server = http.createServer((req, resp) => {
 
     var parameters = getParameters(req.url)
 
-    var a = parameters["a"]
-    var b = parameters["b"]
-
     var temp = fs.readFileSync("pac.js", "utf-8")
     temp = temp.replace("[template]", getHostIp())
 

@@ -12,8 +12,6 @@ var rules = [
     /.*.messenger.com/,
     /.*.tumblr.com/,
     /.*.share.dmhy.org/,
-    /.*.archeage.jp/,
-    /.*.blogspot.jp/,
     /.*.bbc.com/,
     /.*.ero-video.net/,
     /.*.onedrive.live.com/,
