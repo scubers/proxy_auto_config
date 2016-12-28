@@ -2605,7 +2605,7 @@ var rules = [
     /.*.zyzc9.com/,
 ];
 
-var proxy = "PROXY [template]:8787;";
+var proxy = "PROXY [template];";
 var direct = "DIRECT";
 var allProxy = 0;
 
