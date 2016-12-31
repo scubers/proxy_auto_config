@@ -10,7 +10,6 @@ function getParameters(url) {
 
     var paramstr = url.match(/\?.*$/) + ""
     paramstr = paramstr.substring(1, paramstr.length)
-    console.log(paramstr)
     var arr = paramstr.split("&")
     for (var i in arr) {
         var keyvalue = arr[i].split("=")
@@ -26,7 +25,6 @@ function getHostIp() {
     var b = a["en0"]
     for (var i in b) {
         if (b[i].family == "IPv4") {
-            console.log(b[i].address)
             return b[i].address
         }
     }
@@ -36,8 +34,9 @@ var port = 5656
 
 const server = http.createServer((req, resp) => {
 
-    var parameters = getParameters(req.url)
+    console.log("-------------" + req.url + "------------")
 
+    var parameters = getParameters(req.url)
     var temp = fs.readFileSync("pac.js", "utf-8")
     temp = temp.replace("[template]", getHostIp() + ":50015")
 
@@ -47,7 +46,7 @@ const server = http.createServer((req, resp) => {
 
     resp.write(temp)
     resp.end()
-
+    
 })
 
 server.listen(port)
