@@ -32,14 +32,14 @@ function getHostIp() {
     }
 }
 
-var port = 9887
+var port = 5656
 
 const server = http.createServer((req, resp) => {
 
     var parameters = getParameters(req.url)
 
     var temp = fs.readFileSync("pac.js", "utf-8")
-    temp = temp.replace("[template]", getHostIp() + ":5656")
+    temp = temp.replace("[template]", getHostIp() + ":50015")
 
     if (req.url.indexOf("all") > 0) {
         temp = temp.replace("var allProxy = 0;", "var allProxy = 1;")
