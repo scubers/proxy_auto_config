@@ -35,9 +35,9 @@ var port = 5656
 const server = http.createServer((req, resp) => {
 
     console.log("-------------" + req.url + "------------")
-
+    
     var parameters = getParameters(req.url)
-    var temp = fs.readFileSync("pac.js", "utf-8")
+    var temp = fs.readFileSync(__dirname + "/pac.js", "utf-8")
     temp = temp.replace("[template]", getHostIp() + ":50015")
 
     if (req.url.indexOf("all") > 0) {

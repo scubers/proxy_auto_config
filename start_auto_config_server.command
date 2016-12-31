@@ -20,7 +20,8 @@ echo "自动代理地址为: http://$my_ip:5656"
 echo "手动代理地址为: http://$my_ip:50015"
 
 
-./server.js
+$(dirname $0)/server.js
+
 
 
 # echo $(cat "$yml_path")
